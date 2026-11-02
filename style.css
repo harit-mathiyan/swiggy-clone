@@ -1,0 +1,1016 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --orange: #ff5200;
+    --ink: #282c3f;
+    --muted: #686b78;
+    --line: #e9e9eb
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: Inter, Arial, sans-serif;
+    background: #fff
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.container {
+    width: min(1120px, calc(100% - 64px));
+    margin-inline: auto
+}
+
+.hero {
+    background: var(--orange);
+    color: #fff;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden
+}
+
+.navbar {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #fff
+}
+
+.brand-icon {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    color: var(--orange);
+    border-radius: 9px 9px 9px 3px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 22px
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.nav-links a {
+    white-space: nowrap
+}
+
+.app-link {
+    border: 1px solid #fff;
+    border-radius: 9px;
+    padding: 12px 17px
+}
+
+.app-link b {
+    margin-left: 8px
+}
+
+.signin {
+    background: #111;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px
+}
+
+.mobile-menu {
+    display: none
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 26px 20px 36px
+}
+
+.hero h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin: 0 auto 20px;
+    font-weight: 800;
+    max-width: 760px
+}
+
+.search-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 0 auto 42px;
+    max-width: 620px
+}
+
+.search-row label {
+    height: 52px;
+    background: #fff;
+    color: #555;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0 3px 10px #a32d0017
+}
+
+.location {
+    width: 235px
+}
+
+.search {
+    width: 385px
+}
+
+.search-row input {
+    border: 0;
+    outline: 0;
+    min-width: 0;
+    width: 100%;
+    font: inherit;
+    font-size: 12px;
+    padding: 0 8px;
+    color: #333
+}
+
+.search-row input::placeholder {
+    color: #777
+}
+
+.location span {
+    font-size: 17px
+}
+
+.location b {
+    font-size: 19px;
+    color: #444
+}
+
+.search span {
+    font-size: 22px;
+    color: #555
+}
+
+.hero-deco {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-size: 62px;
+    line-height: 1.1;
+    filter: drop-shadow(0 8px 8px #9e2a003d);
+    opacity: .95
+}
+
+.deco-left {
+    left: 2%;
+    top: 10px;
+    transform: rotate(-13deg)
+}
+
+.deco-right {
+    right: 2%;
+    top: 16px;
+    transform: rotate(12deg)
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    max-width: 860px
+}
+
+.service-card {
+    height: 190px;
+    background: #fff;
+    border-radius: 23px;
+    color: #45464b;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    padding: 23px 20px;
+    box-shadow: 0 8px 16px #a932001c
+}
+
+.service-card h2 {
+    font-size: 21px;
+    line-height: 1;
+    margin: 0 0 6px;
+    font-weight: 900;
+    letter-spacing: -.7px
+}
+
+.service-card p {
+    font-size: 13px;
+    color: #858585;
+    margin: 0 0 9px
+}
+
+.service-card small {
+    font-size: 10px;
+    color: var(--orange);
+    font-weight: 800;
+    background: #fff1e9;
+    border-radius: 5px;
+    padding: 4px 6px
+}
+
+.round-arrow {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+    width: 30px;
+    height: 30px;
+    background: var(--orange);
+    border-radius: 50%;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 20px
+}
+
+.service-art {
+    position: absolute;
+    right: 4px;
+    bottom: -6px;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 76px;
+    filter: drop-shadow(0 8px 5px #0002)
+}
+
+.food-art {
+    background: #fff0d5
+}
+
+.grocery-art {
+    background: #e9f7e8
+}
+
+.dine-art {
+    background: #f1f3f4
+}
+
+.content-section {
+    padding: 38px 0 48px;
+    border-bottom: 1px solid var(--line)
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px
+}
+
+.section-title h2,
+.cities h2 {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.55px;
+    margin: 0
+}
+
+.slider-arrows {
+    display: flex;
+    gap: 8px
+}
+
+.slider-arrows button {
+    width: 29px;
+    height: 29px;
+    border: 0;
+    border-radius: 50%;
+    background: #eee;
+    color: #777;
+    font-size: 22px;
+    line-height: 1
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 20px 12px
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: #45464b
+}
+
+.food-emoji {
+    width: 90px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    font-size: 54px;
+    filter: drop-shadow(0 6px 4px #0002);
+    transition: transform .2s
+}
+
+.food-item:hover .food-emoji {
+    transform: translateY(-5px)
+}
+
+.insta-section {
+    padding-top: 40px;
+    padding-bottom: 48px
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 20px 13px
+}
+
+.insta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 9px;
+    font-size: 11px;
+    line-height: 1.35
+}
+
+.grocery-emoji {
+    width: 100%;
+    height: 112px;
+    background: #f4f4f6;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-size: 56px;
+    filter: drop-shadow(0 4px 4px #00000008)
+}
+
+.insta-item b {
+    font-weight: 600
+}
+
+.dineout-section {
+    padding-top: 42px;
+    padding-bottom: 48px
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px
+}
+
+.restaurant-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000008
+}
+
+.restaurant-photo {
+    height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    overflow: hidden
+}
+
+.restaurant-photo:after {
+    content: "";
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, #0009)
+}
+
+.restaurant-photo b {
+    position: absolute;
+    z-index: 1;
+    bottom: 12px;
+    left: 12px;
+    color: #fff;
+    font-size: 13px
+}
+
+.photo-one {
+    background: linear-gradient(135deg, #b66d36, #f3c48b)
+}
+
+.photo-two {
+    background: linear-gradient(135deg, #604c3d, #e4b27e)
+}
+
+.photo-three {
+    background: linear-gradient(135deg, #8a6b4c, #e9d2a5)
+}
+
+.photo-four {
+    background: linear-gradient(135deg, #d21b22, #f7a2a2)
+}
+
+.restaurant-info {
+    padding: 10px
+}
+
+.restaurant-info h3 {
+    font-size: 12px;
+    margin: 0 0 7px;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px
+}
+
+.restaurant-info h3 span {
+    white-space: nowrap
+}
+
+.restaurant-info p {
+    font-size: 10px;
+    color: #777;
+    margin: 0 0 8px
+}
+
+.restaurant-info small,
+.restaurant-info em {
+    display: block;
+    font-style: normal;
+    font-size: 9px;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: #e6fff5;
+    color: #0b9a70
+}
+
+.download-banner {
+    margin: 12px 0 42px;
+    background: #171d20;
+    color: white;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 12%;
+    position: relative;
+    overflow: hidden
+}
+
+.mini-brand {
+    font-size: 12px;
+    color: #ff6a26;
+    font-weight: 800
+}
+
+.download-banner h2 {
+    font-size: 25px;
+    margin: 8px 0
+}
+
+.download-banner p {
+    font-size: 12px;
+    color: #aeb3b5;
+    margin: 0
+}
+
+.qr-box {
+    width: 100px;
+    height: 112px;
+    background: #fff;
+    color: #111;
+    border: 5px solid #ddd;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    z-index: 1
+}
+
+.qr-pattern {
+    font-size: 26px;
+    line-height: .8;
+    text-align: center
+}
+
+.qr-box b {
+    font-size: 8px;
+    color: var(--orange)
+}
+
+.banner-food {
+    font-size: 35px;
+    line-height: 1.25;
+    position: absolute;
+    right: 4%;
+    top: 15px;
+    transform: rotate(12deg)
+}
+
+.cities {
+    padding: 0 0 48px
+}
+
+.cities h2 {
+    font-size: 20px;
+    margin-bottom: 15px
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px
+}
+
+.city-grid a {
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 10px;
+    color: #444
+}
+
+footer {
+    background: #f0f0f5;
+    padding: 40px 0 24px
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    gap: 35px;
+    padding-bottom: 35px
+}
+
+.footer-brand .brand {
+    color: var(--orange)
+}
+
+.footer-brand .brand-icon {
+    background: var(--orange);
+    color: white
+}
+
+.footer-brand p {
+    font-size: 11px;
+    color: #777;
+    margin-top: 12px
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.footer-col h3 {
+    font-size: 12px;
+    margin: 3px 0 5px
+}
+
+.footer-col a {
+    font-size: 10px;
+    color: #666
+}
+
+.footer-col .subhead {
+    margin-top: 12px
+}
+
+.socials {
+    display: flex;
+    gap: 11px
+}
+
+.socials a {
+    font-weight: 800
+}
+
+.footer-bottom {
+    border-top: 1px solid #aaa;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: 13px;
+    color: #555
+}
+
+.store-badges {
+    display: flex;
+    gap: 10px
+}
+
+.store-badges span {
+    background: #050505;
+    color: #fff;
+    border-radius: 7px;
+    padding: 7px 12px;
+    font-size: 8px;
+    line-height: 1.1
+}
+
+.store-badges strong {
+    font-size: 13px
+}
+
+@media(max-width:900px) {
+    .container {
+        width: calc(100% - 44px)
+    }
+
+    .navbar {
+        height: 76px
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 11px
+    }
+
+    .hero h1 {
+        font-size: 31px
+    }
+
+    .hero-deco {
+        font-size: 48px
+    }
+
+    .service-cards {
+        gap: 14px
+    }
+
+    .service-card {
+        height: 175px;
+        padding: 19px 15px
+    }
+
+    .service-card h2 {
+        font-size: 17px
+    }
+
+    .service-art {
+        font-size: 60px;
+        width: 95px;
+        height: 95px
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(7, 1fr)
+    }
+
+    .insta-grid {
+        grid-template-columns: repeat(6, 1fr)
+    }
+
+    .restaurant-photo {
+        height: 120px
+    }
+
+    .footer-inner {
+        gap: 20px
+    }
+}
+
+@media(max-width:640px) {
+    .container {
+        width: calc(100% - 32px)
+    }
+
+    .hero {
+        min-height: 0
+    }
+
+    .navbar {
+        height: 68px
+    }
+
+    .brand {
+        font-size: 21px
+    }
+
+    .brand-icon {
+        width: 29px;
+        height: 29px
+    }
+
+    .nav-links {
+        display: none
+    }
+
+    .mobile-menu {
+        display: block;
+        border: 1px solid #ffffff80;
+        background: transparent;
+        color: white;
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 5px 10px
+    }
+
+    .hero-content {
+        padding: 38px 16px 28px
+    }
+
+    .hero h1 {
+        font-size: 27px;
+        line-height: 1.2;
+        letter-spacing: -.7px;
+        max-width: 430px
+    }
+
+    .desktop-break {
+        display: none
+    }
+
+    .hero-deco {
+        font-size: 30px;
+        opacity: .45
+    }
+
+    .deco-left {
+        left: -7px;
+        top: 0
+    }
+
+    .deco-right {
+        right: -8px;
+        top: 0
+    }
+
+    .search-row {
+        flex-direction: column;
+        max-width: 430px;
+        gap: 9px;
+        margin-bottom: 24px
+    }
+
+    .search-row label {
+        width: 100%;
+        height: 47px
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 430px
+    }
+
+    .service-card {
+        height: 142px;
+        border-radius: 17px;
+        padding: 18px 17px
+    }
+
+    .service-card h2 {
+        font-size: 18px
+    }
+
+    .service-card p {
+        font-size: 11px
+    }
+
+    .service-art {
+        width: 100px;
+        height: 100px;
+        font-size: 65px
+    }
+
+    .round-arrow {
+        width: 25px;
+        height: 25px;
+        left: 17px;
+        bottom: 14px;
+        font-size: 17px
+    }
+
+    .content-section {
+        padding: 30px 0 34px
+    }
+
+    .section-title {
+        margin-bottom: 18px
+    }
+
+    .section-title h2 {
+        font-size: 18px
+    }
+
+    .slider-arrows {
+        display: none
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 15px 5px
+    }
+
+    .food-emoji {
+        width: 100%;
+        height: 66px;
+        font-size: 42px
+    }
+
+    .food-item {
+        font-size: 10px;
+        gap: 4px
+    }
+
+    .insta-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 17px 10px
+    }
+
+    .grocery-emoji {
+        height: 100px;
+        font-size: 48px
+    }
+
+    .insta-item {
+        font-size: 10px
+    }
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px
+    }
+
+    .restaurant-photo {
+        height: 105px;
+        font-size: 52px
+    }
+
+    .restaurant-photo b {
+        font-size: 10px;
+        left: 8px;
+        bottom: 8px
+    }
+
+    .restaurant-info {
+        padding: 8px
+    }
+
+    .restaurant-info h3 {
+        font-size: 10px
+    }
+
+    .restaurant-info p {
+        font-size: 9px
+    }
+
+    .restaurant-info small,
+    .restaurant-info em {
+        font-size: 8px;
+        padding: 6px
+    }
+
+    .download-banner {
+        margin: 10px 0 30px;
+        padding: 23px 18px;
+        min-height: 145px
+    }
+
+    .download-banner h2 {
+        font-size: 19px;
+        max-width: 210px
+    }
+
+    .download-banner p {
+        font-size: 10px;
+        max-width: 210px;
+        line-height: 1.5
+    }
+
+    .qr-box {
+        width: 78px;
+        height: 90px;
+        flex-shrink: 0
+    }
+
+    .qr-pattern {
+        font-size: 20px
+    }
+
+    .banner-food {
+        display: none
+    }
+
+    .cities {
+        padding-bottom: 30px
+    }
+
+    .cities h2 {
+        font-size: 17px
+    }
+
+    .city-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px
+    }
+
+    .city-grid a {
+        font-size: 9px;
+        padding: 11px 5px
+    }
+
+    footer {
+        padding: 30px 0 20px
+    }
+
+    .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 16px;
+        padding-bottom: 25px
+    }
+
+    .footer-brand {
+        grid-column: span 2
+    }
+
+    .footer-col {
+        gap: 9px
+    }
+
+    .footer-col h3 {
+        font-size: 11px
+    }
+
+    .footer-col a {
+        font-size: 9px
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        font-size: 11px
+    }
+
+    .store-badges {
+        justify-content: center
+    }
+
+    .store-badges span {
+        text-align: left
+    }
+}
+
+@media(max-width:360px) {
+    .hero h1 {
+        font-size: 24px
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .section-title h2 {
+        font-size: 16px
+    }
+
+    .service-card h2 {
+        font-size: 16px
+    }
+}
+
+.service-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%
+}
